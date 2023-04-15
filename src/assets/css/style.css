@@ -1,0 +1,457 @@
+
+:root{
+    --primary-color: #D21312;
+    --secondary-color: #ED2B2A;
+    --third-color: #F15A59;
+    --light-blue-100: #F3F5FC;
+    --gray-color: #495057;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background: #1c1c1c;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.container{
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    gap: 112px;
+}
+
+.container--right{
+    height: 90%;
+    width: 32%;
+    margin: 40px 40px 0 0;
+}
+.container--left{
+    height: 90%;
+    width: 68%;
+    margin: 40px 0 0 200px;
+}
+
+.container__box{
+    width: 100%;
+}
+
+.container__emptyBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+}
+
+.emptyBox__image{
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(95%);
+}
+.emptyBox__title{
+    width: 100%;
+    font-weight: 700px;
+    font-size: 24;
+}
+.emptyBox__text{
+    width: 100%;
+    font-weight: 400px;
+    font-size: 16px;
+}
+
+.logo{
+    height: 31px;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+}
+
+.box__logo{
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__box--input{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-end;
+}
+.container__box--output{
+    width: 100%;
+    height: 100%;
+    background: var(--light-blue-100);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-weight: 400px;
+    font-size: 16px;
+    color: var(--gray-color);
+}
+
+.box__text--input {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.box__text--input > textarea{
+    height: 90%;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: none;
+    padding: 10px;
+    border: none;
+    resize: none;
+    outline: none;
+    color: var(--third-color);
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.box__text--output {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-items: flex-end;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.box__text--output  > p{
+    height: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+
+.box__warn{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 5%;
+    width: 100%;
+    font-size: 12px;
+    color: var(--light-blue-100);
+}
+
+.warn__icon{
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+.box__utils{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.utils__special{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 6%;
+}
+
+.utils__icon{
+    text-align: center;
+    object-fit: cover;
+    width: 15px;
+    height: 15px;
+    filter: invert(1);
+    z-index: -1;
+}
+.box__button{
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: all ease 0.5s;
+}
+
+.box__button:hover{
+    background: var(--secondary-color);
+    color: white;
+}
+
+.box__button--output{
+    width: 90%;
+    height: 10%;
+}
+
+.box__button--input{
+    width: 90%;
+    color: white;
+    background: var(--secondary-color);
+}
+
+.box__button--icon{
+    border-radius: none;
+    clip-path: circle(100%);
+    padding: 5px;
+    box-sizing: content-box;
+    border: none;
+    z-index: 1;
+}
+.hidden{
+    display: none;
+}
+
+
+.footer {
+    height: 4vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer > p{
+    text-align: center;
+}
+
+.credits{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.list__title{
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+.credits__list{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.list__item{
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.list__item > a{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.list__item > a:hover{
+    padding: 5px;
+    border-radius: 15px;
+    color: black;
+    background: rgba(255, 255, 255, 0.404);
+}
+.list__item > a:visited{
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .logo {
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    }
+    .box__logo{
+        top: 15px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+    }
+    .container {
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container--left{
+        margin: 0;
+        width: 90%;
+        height: fit-content;
+    }
+
+
+    .container--right{
+        margin: 0;
+        width: 90%;
+        height: fit-content;
+    }
+
+    .container__box--input{
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .box__text--input {
+        height: 40vh;
+    }
+
+    .box__text--input > textarea{
+        height: 20vh;
+    }
+
+    .box__warn{
+        height: 10%;
+    }
+    .box__utils{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box__button--output{
+        box-sizing: content-box;
+        height: 20%;
+    }
+
+    .utils__special{
+        flex-direction: row;
+    }
+    .emptyBox__image{
+        display: none;
+    }
+    .footer{
+        height: 100px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo {
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+    }
+    .box__logo{
+        top: 15px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+    }
+    .container {
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .container--left{
+        margin: 0;
+        width: 90%;
+        height: fit-content;
+    }
+
+
+    .container--right{
+        margin: 0;
+        width: 90%;
+        height: fit-content;
+    }
+
+    .container__box--input{
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .box__text--input {
+        height: 60vh;
+    }
+
+    .box__text--input > textarea{
+        height: 40vh;
+    }
+
+    .box__warn{
+        height: 10%;
+    }
+    .box__utils{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box__button--output{
+        box-sizing: content-box;
+        height: 20%;
+    }
+
+    .utils__special{
+        flex-direction: row;
+    }
+    .emptyBox__image{
+        display: none;
+    }
+    .footer{
+        height: 100px;
+    }
+}
+

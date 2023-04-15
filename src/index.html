@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypter/Decrypter - Practical Programmer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!--logo here-->
+        <div class="box__logo">
+            <img class="logo" src="./assets/img/logo.png" alt="">
+        </div>
+        
+    </header>
+    <main>
+        <!--Global Container-->
+        <div class="container">
+            <!--Left container-->
+            <div class="container container--left">
+                <div class="container__box container__box--input">
+                    <div class="box__text box__text--input">
+                        <textarea name="inputText" id="inputText" placeholder="Type something here" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="box__warn">
+                        <img class="warn__icon" id="warnIcon" src="./assets/img/warn.png" alt="">
+                        <div class="warn__text">
+                            <p id="warnText">Only lower case letters and without accent are allowed.</p>
+                        </div>
+                    </div>
+                    <div class="box__utils">
+                        <button class="box__button box__button--input" id="encryptButton">Encrypt</button>
+                        <div class="utils__special">
+                            <button class="box__button box__button--icon" id="swapButton">
+                                <img class="utils__icon" src="./assets/img/swap.png" alt="">
+                            </button>
+                            <button class="box__button box__button--icon" id="lowerCaseButton">
+                                <img class="utils__icon" src="./assets/img/lowercase.png" alt="">
+                            </button>
+                        </div>
+                        <div class="utils__special">
+                            <button class="box__button box__button--icon" id="fixButton">
+                                <img class="utils__icon" src="./assets/img/fix.png" alt="">
+                            </button>
+                            <button class="box__button box__button--icon" id="cleanButton">
+                                <img class="utils__icon" src="./assets/img/trash.png" alt="">
+                            </button>
+                        </div>
+                        <button class="box__button" id="decryptButton">Decrypt</button>
+                    </div>
+                </div>
+        </div>
+        <!--Right container-->
+        <div class="container container--right">
+            <div class="container__box container__box--output">
+                <div class="container__emptyBox" id="emptyBox">
+                    <img class="emptyBox__image" src="./assets/img/search.svg" alt="">
+                    <div class="emptyBox__title">
+                        <h3>
+                            No messages were found.
+                        </h3>
+                    </div>
+                    <div class="emptyBox__text">
+                        <p>
+                            Enter the text you wish encrypt or decrypt.
+                        </p>
+                    </div>
+                </div>
+                <div class="box__text box__text--output hidden" id="textBox">
+                    <p id="outputText">
+
+                    </p>
+                    <button class="box__button box__button--output" id="copyButton">
+                        Copy
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <!--Footer here-->
+    <footer class="footer">
+        <div class='credits'>
+            <h3 class='list__title'>
+                PracticalDev
+            </h3>
+            <ul class="credits__list">
+                <li class="list__item">
+                    <a href="https://github.com/practicaldev101" target="_blank"><img src="./assets/img/github.svg" style="color: white;" alt=""></a>
+                </li>
+                <li class="list__item">
+                    <a href="https://www.youtube.com/channel/UCk6a5c-G9dIpBDwrBTATgBw" target="_blank"><img src="./assets/img/youtube.svg" style="color: white;" alt=""></a>
+                </li>
+                <li class="list__item">
+                    <a href="https://www.tiktok.com/@practicalprogrammer" target="_blank"><img src="./assets/img/tiktok.svg" style="color: white;" alt=""></a>
+                </li>
+                <li class="list__item">
+                    <a href="https://www.instagram.com/practical_dev/" target="_blank"><img src="./assets/img/instagram.svg" style="color: white;" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+<script src="./assets/js/main.js" type="module"></script>
+</body>
+</html>
