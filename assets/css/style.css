@@ -329,7 +329,7 @@ body{
     .container--left{
         margin: 0;
         width: 90%;
-        height: fit-content;
+        height: 50%;
     }
 
 
@@ -352,6 +352,17 @@ body{
 
     .box__text--input > textarea{
         height: 20vh;
+    }
+
+    .box__text--output{
+        height: 400px;
+    }
+
+    .box__text--output  > p{
+        height: 100%;
+        width: 100%;
+        overflow-wrap: break-word;
+        overflow-y: scroll;
     }
 
     .box__warn{
@@ -427,6 +438,17 @@ body{
 
     .box__text--input > textarea{
         height: 40vh;
+    }
+
+    .box__text--output{
+        height: 300px;
+    }
+
+    .box__text--output  > p{
+        height: 100%;
+        width: 100%;
+        overflow-wrap: break-word;
+        overflow-y: scroll;
     }
 
     .box__warn{
